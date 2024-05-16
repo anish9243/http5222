@@ -1,0 +1,25 @@
+extends common/layout 
+
+block layout-content 
+  section#hero
+    h1 Welcome to ShopEasy!
+    p Your one-stop online store for the best products at unbeatable prices.
+    a(href="#featured") Shop Now
+
+  section#categories
+    h2 Shop by Category
+    ul
+        li: a(href="#") Electronics
+        li: a(href="#") Fashion
+        li: a(href="#") Home & Kitchen
+        li: a(href="#") Toys & Games
+
+  section#featured
+    h2 Featured Products
+    .products
+      each product in featuredProducts
+        .product
+          img(src=`/img/${product.img}`, alt=product.name)
+          h3= product.name
+          p $#{product.price}
+          button#button Add to Cart
