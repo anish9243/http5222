@@ -70,7 +70,7 @@ app.get("/admin/menu/delete", async (request, response) => {
   response.redirect("/admin/menu");
 });
 
-//EDIT PAGE AND FORM PROCESSING PATH
+//EDIT PAGE AND PROCESSING PATH
 app.get("/admin/menu/edit", async (request, response) => {
   if (request.query.linkId) {
     let linkToEdit = await getSingleLink(request.query.linkId);
