@@ -1,0 +1,22 @@
+extends common/layout
+
+block layout-content
+  section#contact.my-5
+    .container
+      h2.text-center.mb-4 Contact Us
+      .row.justify-content-center
+        .col-md-8.col-lg-6
+          .card.shadow
+            .card-body
+              form
+                .form-group
+                  label(for='name') Name:
+                  input#name.form-control(type='text', placeholder='Enter your name')
+                .form-group
+                  label(for='email') Email:
+                  input#email.form-control(type='email', placeholder='Enter your email')
+                .form-group
+                  label(for='message') Message:
+                  textarea#message.form-control(rows='5', placeholder='Enter your message')
+                .text-center
+                  button.btn.btn-primary(type='submit') Submit

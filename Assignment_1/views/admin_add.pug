@@ -1,0 +1,24 @@
+//- this pug will add product in the Home Page link:http://localhost:8888/admin/add
+extends common/layout
+
+block layout-content
+    section#admin-add.my-5
+        .container
+            h2.text-center.mb-4 Add Featured Products
+            .row.justify-content-center
+                .col-md-8
+                    form(action='/admin/add/product' method='GET' enctype='multipart/form-data')
+                        .form-group
+                            label(for='name') Product Name:
+                            input#name.form-control(type='text' name='name' placeholder='Enter product name' required)
+                        .form-group
+                            label(for='brand') Brand:
+                            input#brand.form-control(type='text' name='brand' placeholder='Enter brand name' required)
+                        .form-group
+                            label(for='price') Price:
+                            input#price.form-control(type='number' step='0.01' name='price' placeholder='Enter price' required)
+                        .form-group
+                            label(for='rating') Rating:
+                            input#rating.form-control(type='text' name='rating' placeholder='Enter rating' required)
+                        button.btn.btn-primary(type='submit') Add Product
+

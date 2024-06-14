@@ -5,7 +5,7 @@ const dotenv = require("dotenv");
 //Load the environment variables from .env
 dotenv.config();
 
-const db = require("./modules/movies/db"); //load db.js
+const db = require("./modules/groceries/db"); //load db.js
 
 //set up the Express app
 const app = express();
@@ -21,29 +21,53 @@ app.use(express.static(path.join(__dirname, "public")));
 
 //USE PAGE ROUTES FROM ROUTER(S)
 app.get("/", async (request, response) => {
-  let movieList = await db.getMovies();
-  //if there's nothing in the movies collection, initialize with some content then get the movies again
-  if (!movieList.length) {
-    await db.initializeMovies(); //load data into movies
-    movieList = await db.getMovies();
+  let groceryList = await db.getGroceries();
+  //if there's nothing in the groceries collection, initialize with some content then get the groceries again
+  if (!groceryList.length) {
+    await db.initializeGroceries(); //load data into groceries
+    groceryList = await db.getGroceries();
   }
-  console.log(movieList);
-  response.render("index", { movies: movieList });
+  //console.log(groceryList);
+  response.render("index", { groceries: groceryList });
 });
-app.get("/add", async (request, response) => {
-  //add a new movie
-  await db.addMovie("2012", 2012 , "G");
-  response.redirect("/");
+
+// Fruits & Vegetables page route
+app.get("/fruits-vegetables", async (request, response) => {
+  let fruitsAndVegetables = await db.getFruitsAndVegetables();
+  response.render("fruits_vegetables", { fruitsAndVegetables });
 });
-app.get("/update", async (request, response) => {
-  //update a movie name
-  await db.updateMovieRating("Dhol", "R");
-  response.redirect("/");
-})
-app.get("/delete", async (request, response) => {
-  //delete movies by rating
-  await db.deleteMoviesByRating("R");
-  response.redirect("/");
+
+// Route to add a new product (GET request)
+app.get("/admin/add/product", async (request, response) => {
+  const { name, brand, price, rating } = request.query;
+
+  // Validate input (you can add more validation as needed)
+  if (!name || !price || !brand || !rating) {
+    return response.status(400).send("Name, brand, price, and rating are required.");
+  }
+
+  try {
+    await db.addGrocery(name, brand, parseFloat(price), rating); // Add the product to the database
+    response.redirect("/"); // Redirect to home page after adding
+  } catch (error) {
+    console.error("Error adding product:", error);
+    response.status(500).send("Error adding product. Please try again later.");
+  }
+});
+
+// About page route
+app.get("/about", (request, response) => {
+  response.render("about");
+});
+
+// Contact page route
+app.get("/contact", (request, response) => {
+  response.render("contact");
+});
+
+// Render form to add a product
+app.get("/admin/add", (request, response) => {
+  response.render("admin_add");
 });
 
 //set up server listening

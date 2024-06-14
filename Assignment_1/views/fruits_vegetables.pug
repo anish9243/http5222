@@ -1,0 +1,15 @@
+extends common/layout
+
+block layout-content
+  section#fruits-vegetables.my-5
+    .container
+      h2.text-center.mb-4 Fruits & Vegetables
+      .row
+        each product in fruitsAndVegetables
+          .col-md-3.col-sm-6.mb-4
+            .card.shadow-sm
+              img.card-img-top(src=`/img/${product.name}.jpg`, alt=product.name)
+              .card-body
+                h5.card-title= product.name
+                p.card-text $#{product.price.toFixed(2)}
+                button.btn.btn-success Add to Cart  
