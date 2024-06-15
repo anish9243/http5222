@@ -2,8 +2,6 @@
 
 This README file contains citations for images sourced from various platforms.
 
-## 1. FreePik
-
 - **Watermelon Fruit**:  
   Link: [Watermelon Fruit](https://www.freepik.com/premium-photo/watermelon-fruit-with-cut-piece-isolated-white-background_9341886.htm)
 
@@ -18,8 +16,6 @@ This README file contains citations for images sourced from various platforms.
 
 - **Yellow, Red, Green Bell Pepper**:  
   Link: [Bell Pepper](https://www.freepik.com/premium-photo/yellow-red-green-fresh-bell-pepper-white-background_3614911.htm)
-
-## 2. Adobe Stock
 
 - **Tomato**:  
   Link: [Tomato](https://stock.adobe.com/search?k=%22tomato+white+background%22&asset_id=29788505)
@@ -36,12 +32,8 @@ This README file contains citations for images sourced from various platforms.
 - **Cherry**:  
   Link: [Cherry](https://stock.adobe.com/search?k=%22cherry+fruit%22&asset_id=340639650)
 
-## 3. Pinterest
-
 - **Strawberry**:  
   Link: [Strawberry](https://www.pinterest.com/pin/image-strawberry-food-three-3-closeup-white-background--472948398357431310/)
-
-## 4. Depositphotos
 
 - **Mango**:  
   Link: [Mango](https://depositphotos.com/photos/mango-white-background.html?qview=9603390)
@@ -49,28 +41,22 @@ This README file contains citations for images sourced from various platforms.
 - **Apple**:  
   Link: [Apple](https://depositphotos.com/photos/apple.html?qview=10806368)
 
-## 5. iStock
-
 - **Banana**:  
   Link: [Banana](https://www.istockphoto.com/photo/banana-bunch-gm173242750-7671231?searchscope=image%2Cfilm)
-
-## 6. Dreamstime
 
 - **Orange**:  
   Link: [Orange](https://www.dreamstime.com/stock-photo-orange-fruit-isolated-white-background-image61947616)
 
-## 7. Other Sources
-
-- **Garlic (Vecteezy)**:  
+- **Garlic**:  
   Link: [Garlic](https://www.vecteezy.com/photo/8245343-garlic-on-a-white-background-garlic-is-a-medicinal-plant-and-is-a-kind-of-spice)
 
-- **Lettuce (FreePik)**:  
+- **Lettuce**:  
   Link: [Green Oak Lettuce](https://www.freepik.com/premium-photo/green-oak-lettuce-white-background_16340903.htm)
 
 - **Red Onion**:  
   Link: [Red Onion](https://www.freepik.com/premium-photo/red-onion-isolated-white-background_21839183.htm)
 
-- **Peach (Gerbes)**:  
+- **Peach**:  
   Link: [Peach](https://www.gerbes.com/p/fresh-california-yellow-peach-each/0000000004038)
 
 ---
