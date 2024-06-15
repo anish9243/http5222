@@ -27,25 +27,25 @@ async function getGroceries() {
 async function initializeGroceries() {
   const groceryList = [
     {
-      name: "Bread",
+      name: "Apple",
       brand: "Wonder",
       price: 2.97,
       rating: 4.4,
     },
     {
-      name: "Bread",
+      name: "Broccoli",
       brand: "Wonder",
       price: 2.97,
       rating: 4.4,
     },
     {
-      name: "Bread",
+      name: "Banana",
       brand: "Wonder",
       price: 2.97,
       rating: 4.4,
     },
     {
-      name: "Bread",
+      name: "Potato",
       brand: "Wonder",
       price: 2.97,
       rating: 4.4,

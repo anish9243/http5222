@@ -1,4 +1,3 @@
-//- this pug will add product in the Home Page link:http://localhost:8888/admin/add
 extends common/layout
 
 block layout-content
@@ -10,7 +9,28 @@ block layout-content
                     form(action='/admin/add/product' method='GET' enctype='multipart/form-data')
                         .form-group
                             label(for='name') Product Name:
-                            input#name.form-control(type='text' name='name' placeholder='Enter product name' required)
+                            select#name.form-control(name='name' required)
+                                option(value='' disabled selected) Select a product
+                                option(value='Apple') Apple
+                                option(value='Banana') Banana
+                                option(value='Carrot') Carrot
+                                option(value='Broccoli') Broccoli
+                                option(value='Strawberry') Strawberry
+                                option(value='Spinach') Spinach
+                                option(value='Grapes') Grapes
+                                option(value='Tomato') Tomato
+                                option(value='Potato') Potato
+                                option(value='Orange') Orange
+                                option(value='Mango') Mango
+                                option(value='Pineapple') Pineapple
+                                option(value='Lettuce') Lettuce
+                                option(value='Cucumber') Cucumber
+                                option(value='Bell Pepper') Bell Pepper
+                                option(value='Onion') Onion
+                                option(value='Garlic') Garlic
+                                option(value='Peach') Peach
+                                option(value='Cherry') Cherry
+                                option(value='Watermelon') Watermelon
                         .form-group
                             label(for='brand') Brand:
                             input#brand.form-control(type='text' name='brand' placeholder='Enter brand name' required)
@@ -21,4 +41,3 @@ block layout-content
                             label(for='rating') Rating:
                             input#rating.form-control(type='text' name='rating' placeholder='Enter rating' required)
                         button.btn.btn-primary(type='submit') Add Product
-

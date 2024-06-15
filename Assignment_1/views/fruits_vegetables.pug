@@ -3,13 +3,14 @@ extends common/layout
 block layout-content
   section#fruits-vegetables.my-5
     .container
-      h2.text-center.mb-4 Fruits & Vegetables
+      h2.text-center.mb-5 Fruits & Vegetables
       .row
         each product in fruitsAndVegetables
-          .col-md-3.col-sm-6.mb-4
-            .card.shadow-sm
+          .col-lg-3.col-md-4.col-sm-6.mb-4
+            .card.shadow-sm.border-0
               img.card-img-top(src=`/img/${product.name}.jpg`, alt=product.name)
-              .card-body
+              .card-body.text-center
                 h5.card-title= product.name
-                p.card-text $#{product.price.toFixed(2)}
-                button.btn.btn-success Add to Cart  
+                p.card-text.text-muted= product.brand
+                p.card-text.font-weight-bold $#{product.price.toFixed(2)}
+                button.btn.btn-success Add to Cart

@@ -9,7 +9,7 @@
   height: 150px;
   /* Set a fixed height for the images*/
   object-fit: cover;
-  /* Ensure the image covers the space without distortion*/
+  /*the image covers the space without distortion*/
 }
 
 .fixed-card .card-body {
@@ -22,24 +22,43 @@
 
 .fixed-card .card-title,
 .fixed-card .card-text {
-  margin-bottom: 0.5rem;
-  /* Adjust margin as needed*/
+  margin-bottom: 10px;
 }
+
 
 #contact {
   background-color: #f9f9f9;
-  padding: 2rem 0;
+  padding: 30px 0;
 }
+
 .card {
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 10px;
+  font-size: large;
 }
+
 .card-body {
-  padding: 2rem;
+  padding: 35px;
 }
+
 .form-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 25px;
 }
+
 .btn {
-  padding: 0.75rem 1.5rem;
+  padding: 10px 15px;
+}
+.card {
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
 }

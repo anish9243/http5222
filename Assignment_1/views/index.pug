@@ -1,7 +1,7 @@
 extends common/layout 
 
 block layout-content 
-  section#hero(class="jumbotron text-center bg-primary text-white")
+  section#hero.jumbotron.text-center.bg-primary.text-white
     .container
       h1.display-4 Welcome to ShopEasy!
       p.lead Your one-stop online store for the freshest groceries at unbeatable prices.
@@ -12,10 +12,11 @@ block layout-content
       h2.text-center.mb-4 Featured Products
       .row
         each product in groceries
-          .col-md-3.col-sm-6.mb-4
-            .card.shadow-sm
-              .card-body
+          .col-lg-3.col-md-4.col-sm-6.mb-4
+            .card.shadow-sm.border-0
+              img.card-img-top(src=`/img/${product.name}.jpg`, alt=product.name)
+              .card-body.text-center
                 h5.card-title= product.name
-                p.card-text #{product.brand}
-                p.card-text $#{product.price}
+                p.card-text.text-muted= product.brand
+                p.card-text.font-weight-bold $#{product.price.toFixed(2)}
                 button.btn.btn-success Add to Cart
