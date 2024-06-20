@@ -1,0 +1,7 @@
+extends layout 
+
+block main-content 
+    h1 #{library.querySelector('name').textContent}
+    p Address: #{library.querySelector('address').textContent}
+    p Phone: #{library.querySelector('phoneNumber').textContent}
+    a(href='/') Back to Libraries
