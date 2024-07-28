@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  .container
+    .row
+      .col-md-6
+        .story-input
+          h2 Story Input Section
+          .form-group
+            textarea#storyText.form-control(rows="10" placeholder="Enter your story here...")
+          button.btn.btn-primary.center-btn#generateStory Generate Story
+      .col-md-6
+        .story-display
+          h2 Story Display Section
+          .audio-player
+            h3 Text-to-Speech Player
+            audio#audioPlayer(controls).w-100
+              source(src='', type='audio/mp3')
+          .audio-player.mt-4
+            h3 Background Music Player
+            audio#musicPlayer(controls).w-100
+              source(src='', type='audio/mp3')
+          .related-books.mt-4
+            h3 Related Books Section
+            .row#bookList
